@@ -1,3 +1,150 @@
-.hidden{
-    display: none;
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "DungGeunMo", serif;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hidden {
+  display: none;
+}
+#greeting{
+  color:aquamarine;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#clock {
+  font-size: 2em;
+  color: aquamarine;
+}
+
+#weather {
+  font-size: 21px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  color: aquamarine;
+}
+
+#login-form:hover,
+#todo-form:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+#login-form {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  width: 300px;
+}
+
+#login-form input {
+  outline: none;
+  width: calc(100% - 60px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+
+
+#todo-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  width: 330px;
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-anchor: none;
+  
+}
+
+#todo-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px
+  font-size: 14px;
+}
+
+
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 340px;
+  max-height: 100px; /* 수정된 부분 */
+  overflow-y: auto; /* 수정된 부분 */
+  position: relative;
+  z-index: 2;
+  margin-top: 10px; /* 수정된 부분 */
+}
+
+#todo-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center;
+}
+
+#todo-list li span {
+  flex-grow: 1;
+  color:aquamarine;
+}
+
+#todo-list button {
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+#quote {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInOut 3s ease infinite;
+  color: aquamarine;
 }
